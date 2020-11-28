@@ -12,7 +12,7 @@ services:
       - 10080:80
     volumes:
       - ./backend:/work
-      - ./docker/nginx:/etc/nginx/conf.d
+      - ./infra/nginx/default.conf:/etc/nginx/conf.d/default.conf
     working_dir: /work
 
   db:
