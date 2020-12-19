@@ -37,7 +37,7 @@ return [
     'channels' => [
         'stack' => [
             'driver' => 'stack',
-            'channels' => ['single'],
+            'channels' => ['daily'],
             'ignore_exceptions' => false,
         ],
 
@@ -79,6 +79,7 @@ return [
             'with' => [
                 'stream' => 'php://stderr',
             ],
+            'level' => env('LOG_LEVEL', 'debug'),
         ],
 
         'syslog' => [
